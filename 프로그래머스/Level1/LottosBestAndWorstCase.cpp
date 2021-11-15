@@ -3,6 +3,19 @@
 
 using namespace std;
 
+/*
+[문제]
+로또 번호중에 '0'은 확인할 수 없는 번호
+lottos와 win_nums를 비교하여 몇개까지 맞출수 있는지 최선의 경우와 최악의 경우의 순위를 구하여라.
+
+1등 : 6개 번호 모두 일치
+2등 : 5개 번호 일치
+3등 : 4개 번호 일치
+4등 : 3개 번호 일치
+5등 : 2개 번호 일치
+6(낙첨) : 그 외
+*/
+
 int GetRank(int _correctCount)
 {
 	switch (_correctCount)
@@ -22,18 +35,6 @@ int GetRank(int _correctCount)
 	}
 }
 
-/*
-[문제]
-로또 번호중에 '0'은 확인할 수 없는 번호
-lottos와 win_nums를 비교하여 몇개까지 맞출수 있는지 최선의 경우와 최악의 경우의 순위를 구하여라.
-
-1등 : 6개 번호 모두 일치
-2등 : 5개 번호 일치
-3등 : 4개 번호 일치
-4등 : 3개 번호 일치
-5등 : 2개 번호 일치
-6(낙첨) : 그 외
-*/
 vector<int> solution(vector<int> lottos, vector<int> win_nums)
 {
 	vector<int> answer;
